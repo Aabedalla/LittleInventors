@@ -1,6 +1,6 @@
+"use client";
 import NavBar from "../Components/Navbar"
-import Image from "next/image"
-import {Join} from "../info/joinInfo"
+
 import FormToJoin from "./Components/form"
 import Steps from "./Components/steps"
 const Contact = () =>{
@@ -16,8 +16,8 @@ const Contact = () =>{
                 </p>
             </div>
 
-<Steps />
-<FormToJoin />
+            <Steps />
+            <FormToJoin />
         </>
     )
 }
