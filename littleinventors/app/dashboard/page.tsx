@@ -20,6 +20,14 @@ const Dashboard = () => {
         >
           Messages
         </Link>
+                <Link
+          href="/dashboard/Products"
+          className={`px-4 py-2 rounded ${
+            pathname === "/dashboard/Products" ? "bg-blue-500 text-white" : "bg-white text-gray-700 border"
+          }`}
+        >
+          Projects
+        </Link>
       </div>
     </div>
   );

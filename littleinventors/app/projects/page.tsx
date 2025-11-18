@@ -1,7 +1,39 @@
+"use client";
 import NavBar from "../Components/Navbar"
-import {DistinctiveInfo} from '../info/invations'
+import Link from "next/link";
+import { useState, useEffect } from "react";
 import Image from 'next/image'
+
+
 const Project = ()=>{
+  const [products, setProducts] = useState([]);
+  const [page, setPage] = useState(1);
+  const limit = 9;
+
+  // جلب المنتجات من API
+  const fetchProducts = async () => {
+    try {
+      const res = await fetch("/api/dashboard/product");
+      if (!res.ok) throw new Error("فشل في جلب المنتجات");
+      const data = await res.json();
+      setProducts(data);
+    } catch (err) {
+      console.error(err);
+      alert("حدث خطأ أثناء جلب المنتجات");
+    }
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  // حساب المنتجات المعروضة حسب الصفحة
+  const start = (page - 1) * limit;
+  const end = start + limit;
+  const paginatedProducts = products.slice(start, end);
+
+
+
     return(
         <>
             <NavBar />
@@ -16,14 +48,14 @@ const Project = ()=>{
             </div>
 
                         <div className="grid grid-cols-1 mb-5 mx-10 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-                            {DistinctiveInfo.map(i => (
-                                <div key={i.id} className="bg-white shadow-sm rounded-md">
+                            {paginatedProducts.map(i => (
+                                <div key={i._id} className="bg-white shadow-sm rounded-md">
             
                                     <Image 
-                                        src={`/${i.img}`}
+                                        src={i.images[0]}
                                         width={400}
                                         height={300}
-                                        alt={i.title}
+                                        alt={i.name}
                                         className="rounded-t-md mb-3"
                                     />
             
@@ -38,10 +70,10 @@ const Project = ()=>{
                                     </div>
             
                                     <h3 className="text-[#212121] text-xl pr-5 pb-3 font-extrabold">
-                                        {i.title}
+                                        {i.name}
                                     </h3>
                                     <p className="px-3 text-[#707070] pb-2">
-                                        {i.disc}
+                                        {i.description}
                                     </p>
                                 </div>
                             ))}
