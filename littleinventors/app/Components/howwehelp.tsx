@@ -3,8 +3,8 @@ const HowWeHelp = ()=>{
     return(
         <section>
           <div className="text-center">
-                <h2 className="font-bold py-5 text-[#474747] text-3xl">كيف نساعدك ؟</h2>
-                <p className="text-center text-[#606060] mb-5">
+                <h2 data-aos="fade-up" className="font-bold py-5 text-[#474747] text-3xl">كيف نساعدك ؟</h2>
+                <p data-aos="fade-up" className="text-center text-[#606060] mb-5">
 رحلتك من الفكرة إلى الابتكار في أربع خطوات بسيطة                  
                 </p>
             </div>
@@ -21,6 +21,7 @@ const HowWeHelp = ()=>{
 
     return (
       <div
+      data-aos="fade-up"
         key={h.id}
         className="flex flex-col mx-5 items-center bg-gray-50 p-6 rounded-xl shadow-md text-center space-y-3"
       >

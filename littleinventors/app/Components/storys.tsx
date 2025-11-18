@@ -1,16 +1,24 @@
+"use client";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 import {RealStory} from '../info/realstory'
 const Storys = () =>{
+  useEffect(() => {
+    AOS.init({ duration: 900 }); // مدة الأنيميشن 1 ثانية
+  }, []);
     return(
         <section className='mb-10'>
             <div className="text-center">
-                <h2 className="font-bold py-5 text-[#474747] text-3xl">
+                <h2 data-aos="fade-up" className="font-bold py-5 text-[#474747] text-3xl">
                     قصص نجاح واقعية 
                 </h2>
-                <p className="text-center text-[#606060] mb-5">
+                <p data-aos="fade-down" className="text-center text-[#606060] mb-5">
                    إنجازات حقيقية من مخترعين شباب حقيقيين
                 </p>
             </div>
-<div className="grid grid-cols-1 mx-10  sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+<div  data-aos="fade-left" className="grid grid-cols-1 mx-10  sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
   {RealStory.map((s) => (
     <div 
       key={s.id}
