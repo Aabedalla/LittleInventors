@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from 'next/image'
@@ -73,6 +74,15 @@ const DistinctiveInnovation = ()=> {
                         <p className="px-3 text-[#707070] pb-2">
                                         {i.description}
                         </p>
+                        <div className="p-5">
+                        <Link
+                            href={`/projects/${i._id}`}
+                            className="block text-center w-full bg-gradient-to-r from-[#317EF9] to-[#912FB7] text-white font-semibold py-2 rounded-md shadow-md hover:opacity-90 transition"
+                        >
+                            عرض المشروع
+                        </Link>
+                        </div>
+
                     </div>
                 ))}
             </div>
