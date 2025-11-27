@@ -1,0 +1,22 @@
+export const inovation = [
+    {
+        id:1,
+        name:"الهندسة"
+    },
+    {
+        id:2,
+        name:"طب"
+    },
+    {
+        id:3,
+        name:"تكنولوجيا"
+    },
+    {
+        id:4,
+        name:"العلوم"
+    },
+    {
+        id:5,
+        name:"البيئة"
+    }
+]
