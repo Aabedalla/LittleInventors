@@ -11,7 +11,7 @@ const Vision = ()=>{
             {/* القسم الأول - رؤيتنا */}
             <div className="bg-gradient-to-r from-[#912FB7] to-[#317EF9] text-white text-center py-5 space-y-5">
                 <h1 className="text-3xl font-bold">رؤيتنا</h1>
-                <p className="text-md">
+                <p className="text-md px-3">
                 نبني جيلاً من الباحثين الصغار القادرين على تحويل الأفكار إلى واقع
                 </p>
             </div>
@@ -53,7 +53,7 @@ const Vision = ()=>{
                 ))}
                 </ul>
 
-                <p data-aos="fade-left" className="text-[#606060] mb-5 mt-4 max-w-[700px] mx-auto">
+                <p data-aos="fade-left" className="text-[#606060] px-3 mb-5 mt-4 max-w-[700px] mx-auto">
                 البرنامج يعتمد على التجربة العملية، التعاون بين الطلاب، والتطبيق الحقيقي للمعرفة،
                 حتى يخرج كل طالب بمشروع يمكن عرضه محليًا أو دوليًا.
                 </p>
@@ -62,10 +62,10 @@ const Vision = ()=>{
             </section>
             <section>
                 <div className="text-center pb-3">
-                <h2 data-aos="fade-up" className="text-3xl font-bold text-[#474747] py-5">
+                <h2 data-aos="fade-up" className="text-3xl px-3 font-bold text-[#474747] py-5">
                 كيف تسير رحلة البحث العلمي؟
                 </h2>
-                <p data-aos="fade-left" className="text-[#606060] mb-5 mt-4 max-w-[700px] mx-auto">
+                <p data-aos="fade-left" className="text-[#606060] px-3 mb-5 mt-4 max-w-[700px] mx-auto">
             نرافقك في 6 مراحل واضحة تحوّل فكرتك إلى مشروع حقيقي.         
                 </p>
             <ul 
@@ -129,7 +129,7 @@ const Vision = ()=>{
                 </div>
             </div>
             </section>
-            <section className="grid md:grid-cols-2 gap-5 max-w-5xl mx-auto pb-5">
+            <section className="grid md:grid-cols-2 px-3 gap-5 max-w-5xl mx-auto pb-5">
 
             {/* 1️⃣ */}
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
@@ -176,7 +176,7 @@ const Vision = ()=>{
             </div>
 
             </section>
-            <div className="bg-white mb-3 border shadow-sm p-4 rounded-xl max-w-4xl mx-auto text-center leading-loose">
+            <div className="bg-white mb-5 mx-3 border shadow-sm p-4 rounded-xl max-w-4xl  text-center leading-loose">
             <p className="text-lg font-medium">
 
                 ✨ <span className="text-[#444]">النتيجة؟ كل طالب يعمل على مشروع</span>
