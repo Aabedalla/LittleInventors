@@ -72,16 +72,16 @@ const Project = ()=>{
                             <h3 className="text-[#212121] text-xl pr-5 pb-3 font-extrabold">
                                 {i.name}
                             </h3>
-                            <p className="px-3 text-[#707070] pb-2">
+                            <p className="px-3 text-[#707070] pb-2 line-clamp-2">
                                 {i.description}
                             </p>
                             <div className="p-5">
-                                <Link
-                                    href={`/projects/${i._id}`}
-                                    className="block text-center w-full bg-gradient-to-r from-[#317EF9] to-[#912FB7] text-white font-semibold py-2 rounded-md shadow-md hover:opacity-90 transition"
-                                >
-                                    عرض المشروع
-                                </Link>
+                    <Link
+                        href={`/projects/${i._id}`}
+                        className="block text-center w-full bg-gradient-to-r from-[#317EF9] to-[#912FB7] text-white font-semibold py-2 rounded-md shadow-md hover:opacity-90 transition"
+                    >
+                        عرض المشروع
+                    </Link>
             </div>
 
 

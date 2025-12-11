@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -8,19 +9,19 @@ const Hero = () => {
     {/* النص */}
     <div className="w-full md:w-1/2 text-right space-y-6">
       <h1 className="text-4xl md:text-5xl font-bold text-[#333] leading-snug">
-       أكاديمية المخترعين الصغار
+       أكاديمية الباحثين الصغار
       </h1>
 
       <p className="text-lg md:text-xl text-[#555] leading-relaxed">
-حوّل أفكارك إلى واقع. تواصل مع مرشدين، وطوّر نماذج أولية، واعرض ابتكاراتك للعالم.       
+حوّل أفكارك إلى واقع. تواصل مع مرشدين، وطوّر نماذج أولية، واعرض أبحاثك و ابتكاراتك للعالم.       
       </p>
 
-    <button
-      className="bg-gradient-to-r from-[#317EF9] to-[#912FB7] text-white font-semibold px-8 py-3 rounded-xl shadow-md 
-                  animate-bounce transition-transform duration-200"
+    <Link href={'/projects'}
+      className="bg-gradient-to-r from-[#317EF9] to-[#912FB7] text-white  font-semibold px-8 py-3 rounded-xl shadow-md 
+                  animate-bounce transition-transform  duration-200"
     >
       إكتشف المشاريع
-    </button>
+    </Link>
 
     </div>
 
