@@ -11,13 +11,15 @@ const Hero = () => {
       <h1 className="text-4xl md:text-5xl font-bold text-[#333] leading-snug">
        أكاديمية الباحثين الصغار
       </h1>
-
       <p className="text-lg md:text-xl text-[#555] leading-relaxed">
-حوّل أفكارك إلى واقع. تواصل مع مرشدين، وطوّر نماذج أولية، واعرض أبحاثك و ابتكاراتك للعالم.       
+          هل يدور في ذهنك فكرة مفيدة للعالم من حولك ؟ هل وجدت الطريق لتنفيذها أم لا ؟ في كل الاحوال أنت في المكان الصحيح
+        </p>
+      <p className="text-lg md:text-xl pt-0 text-[#555] leading-relaxed">
+حوّل أفكارك إلى واقع بحثي و علمي. تواصل مع مرشدين، وطوّر أبحاث علمية ونماذج أولية، واعرض أبحاثك و ابتكاراتك للعالم.       
       </p>
 
     <Link href={'/projects'}
-      className="bg-gradient-to-r from-[#317EF9] to-[#912FB7] text-white  font-semibold px-8 py-3 rounded-xl shadow-md 
+      className="bg-gradient-to-r from-[#317EF9] to-[#912FB7] text-white cursor-pointer font-semibold px-8 py-3  rounded-xl shadow-md 
                   animate-bounce transition-transform  duration-200"
     >
       إكتشف المشاريع

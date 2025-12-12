@@ -5,7 +5,7 @@ const HowWeHelp = ()=>{
           <div className="text-center">
                 <h2 data-aos="fade-up" className="font-bold py-5 text-[#474747] text-3xl">كيف نساعدك ؟</h2>
                 <p data-aos="fade-up" className="text-center text-[#606060] mb-5">
-رحلتك من الفكرة إلى البحث العلمي و الابتكار في أربع خطوات بسيطة                  
+رحلتك من الفكرة إلى البحث العلمي في خطوات بسيطة                  
                 </p>
             </div>
             <div className="grid grid-cols-1 mb-5 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">

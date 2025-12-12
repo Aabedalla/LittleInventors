@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 import {RealStory} from '../info/realstory'
-const Storys = () =>{
+const PartnersWork = () =>{
   useEffect(() => {
     AOS.init({ duration: 900 }); // مدة الأنيميشن 1 ثانية
   }, []);
@@ -12,11 +12,11 @@ const Storys = () =>{
         <section className='mb-10'>
             <div className="text-center">
                 <h2 data-aos="fade-up" className="font-bold py-5 text-[#474747] text-3xl">
-                    قصص نجاح واقعية 
+                    جولات تدريبية تم تنفيذها بالتعاون مع مدارس و جمعيات محلية
                 </h2>
-                <p data-aos="fade-down" className="text-center text-[#606060] mb-5">
+                {/* <p data-aos="fade-down" className="text-center text-[#606060] mb-5">
                    إنجازات حقيقية من باحثين شباب حقيقيين
-                </p>
+                </p> */}
             </div>
 <div  data-aos="fade-left" className="grid grid-cols-1 mx-10  sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
   {RealStory.map((s) => (
@@ -47,4 +47,4 @@ const Storys = () =>{
     )
 }
 
-export default Storys
+export default PartnersWork

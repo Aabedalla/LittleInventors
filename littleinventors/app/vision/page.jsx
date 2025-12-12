@@ -12,30 +12,75 @@ const Vision = ()=>{
             <div className="bg-gradient-to-r from-[#912FB7] to-[#317EF9] text-white text-center py-5 space-y-5">
                 <h1 className="text-3xl font-bold">رؤيتنا</h1>
                 <p className="text-md px-3">
-                نبني جيلاً من الباحثين الصغار القادرين على تحويل الأفكار إلى واقع
-                </p>
+                    منهجية البحث العلمي لتمكين الطلبة لتحديد الميول المهنية و تحديد ووصف المشاكل من حولهم و الابتكار في ميولهم المهنية
+                 </p>
             </div>
 
             {/* عن المشروع */}
-            <div className="text-center">
+            {/* <div className="text-center">
                 <h2 data-aos="fade-up" className="text-3xl font-bold text-[#474747] py-5">
                 عن المشروع
                 </h2>
                 <p data-aos="fade-left" className="text-[#606060] mb-5">
                 مشروع الباحثين الصغار هو برنامج بحث علمي مصمم خصيصًا للشباب من عمر 14 إلى 18 سنة.
                 </p>
-            </div>
+            </div> */}
 
-            {/* أهداف المشروع */}
-            <div className="p-5">
-                <h3 className="text-xl font-bold pb-3">أهداف المشروع</h3>
-                <ul className="list-disc px-5 space-y-3">
-                {golse.map(g => (
-                    <li key={g.id}>{g.name}</li>
-                ))}
-                </ul>
-            </div>
 
+            <div>
+  <h2
+    data-aos="fade-up"
+    className="text-center text-3xl font-bold text-[#474747] py-5"
+  >
+    تعلم كيف تصيغ فكرتك بالتعمق في الابحاث و الابتكارات المميزة
+  </h2>
+
+  <div className="flex justify-center w-full">
+    <div className="grid md:grid-cols-2 gap-10 p-4 max-w-5xl w-full">
+
+      {/* العمود الأول */}
+      <div className="space-y-6 text-right">
+
+        <ul className="space-y-3 leading-7">
+          <li>حول أفكارك بمنهجية البحث العلمي الى حل او ابتكار او شيء يستفيد منه من حولك.</li>
+          <li>حول وسخر ميولك الى وظيفة تستطيع الابداع بها.</li>
+          <li>طور فكرتك باستخدام منهجية البحث العلمي لتتحول الى نموذج اولي او نتائج عملية.</li>
+        </ul>
+
+        <div className="space-y-4 leading-7">
+          <p>
+            كل ذالك من خلال إطلاق برنامج قصير المدى موجه لكم أيها الطلبة الناشئين من سن
+            14 - 18 سنة, حيث يهدف الى تدريبكم على اساسيات البحث العلمي, التفكير النقدي,
+            تحدي ميولكم المهنية, مهارات الكتابة و العرض لأبحاثكم العملية الصغيرة بإشراف
+            أشخاص ذو خبرة.
+          </p>
+
+          <p>
+            الفكرة تسعى إلى جعل الطالب شريكا في إنتاج المعرفة لا مجرد متلقٍ,
+            وقادر على تحديد مهنة المستقبل وشريك في الابتكار.
+          </p>
+        </div>
+
+      </div>
+
+      {/* العمود الثاني */}
+      <div className="p-5 text-right">
+        <h3 className="text-xl font-bold pb-3">أهداف المشروع</h3>
+
+        <ul className="list-disc pr-5 space-y-3 leading-7">
+          {golse.map((g) => (
+            <li key={g.id}>{g.name}</li>
+          ))}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+            
+
+            
             {/* مجالات البحث */}
             <div className="text-center pb-3">
                 <h2 data-aos="fade-up" className="text-3xl font-bold text-[#474747] py-5">
