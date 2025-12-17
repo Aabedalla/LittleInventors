@@ -39,7 +39,7 @@ const DistinctiveInnovation = ()=> {
         <section>
             <div className="text-center">
                 <h2 data-aos="fade-up" className="font-bold py-5 text-[#474747] text-3xl">
-                    الابحاث و المشاريع <span className="text-[#3782F9]">المميزة</span>
+                    الابحاث و المشاريع 
                 </h2>
                 <p data-aos="fade-left" className="text-center text-[#606060] mb-5">
                     اكتشف الابحاث و المشاريع الرائدة التي أنشأتها العقول الشابة في جميع أنحاء فلسطين

@@ -4,6 +4,7 @@ import HowWeHelp from "./Components/howwehelp";
 import NavBar from "./Components/Navbar";
 import DistinctiveInnovation from "./Components/spashalinnovation";
 import Storys from "./Components/storys";
+import SlideShow from "./Components/slidshow";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <HowWeHelp />
       <DistinctiveInnovation />
       <Storys />
+      <SlideShow />
       <Ads />
     </>
   );
