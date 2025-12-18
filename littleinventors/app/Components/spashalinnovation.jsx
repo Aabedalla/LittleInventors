@@ -50,15 +50,11 @@ const DistinctiveInnovation = ()=> {
                 {paginatedProducts.slice(0, 4).map(i => (
                     <div data-aos="fade-up" data-aos-delay="50" key={i._id} className="bg-white shadow-sm rounded-md">
 
-                        <div className="w-[400px] h-[300px] overflow-hidden rounded-t-md">
-                            <Image
-                                src={i.images[0]}
-                                fill
-                                alt={i.name}
-                                className="object-cover"
-                            />
-                            </div>
-
+                        <img 
+                            src={`${i.images[0]}`}
+                            alt={i.name}
+                            className="rounded-t-md h-52 w-full object-cover mb-3"
+                        />
 
                         <div className="flex gap-2 p-5 mb-2">
                             <span className="bg-[#FF6F00] text-white rounded-full px-3 py-1 text-sm">
