@@ -51,13 +51,15 @@ const Project = ()=>{
                     {paginatedProducts.map(i => (
                         <div key={i._id} className="bg-white shadow-sm rounded-md">
     
-                            <Image 
-                                src={i.images[0]}
-                                width={400}
-                                height={300}
-                                alt={i.name}
-                                className="rounded-t-md mb-3"
-                            />
+                            <div className="w-[400px] h-[300px] overflow-hidden rounded-t-md">
+                                <Image
+                                    src={i.images[0]}
+                                    fill
+                                    alt={i.name}
+                                    className="object-cover"
+                                />
+                                </div>
+
     
                             <div className="flex gap-2 p-5 mb-2">
                                 <span className="bg-[#FF6F00] text-white rounded-full px-3 py-1 text-sm">
