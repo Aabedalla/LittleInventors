@@ -71,7 +71,7 @@ const DistinctiveInnovation = ()=> {
                         <h3 className="text-[#212121] text-xl pr-5 pb-3 font-extrabold">
                             {i.name}
                         </h3>
-                        <p className="px-3 text-[#707070] pb-2">
+                        <p className="px-3 text-[#707070] line-clamp-2 pb-2">
                                         {i.description}
                         </p>
                         <div className="p-5">
