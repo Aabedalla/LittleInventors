@@ -58,7 +58,7 @@ const ProjectDetails = async ({ params }) => {
             </span>
           </div>
 
-          <p className="text-gray-700 leading-relaxed line-clamp-2 text-lg">
+          <p className="text-gray-700 leading-relaxed text-lg">
             {project.description}
           </p>
 
