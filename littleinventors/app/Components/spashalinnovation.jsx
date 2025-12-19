@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Image from 'next/image'
+import { Star } from 'lucide-react';
+
 
 const DistinctiveInnovation = ()=> {
       useEffect(() => {
@@ -33,6 +34,7 @@ const DistinctiveInnovation = ()=> {
       // حساب المنتجات المعروضة حسب الصفحة
       const start = (page - 1) * limit;
       const end = start + limit;
+      const featuredProducts = products.filter(p => !!p.isFeatured).slice(0, 4);
       const paginatedProducts = products.slice(start, end);
     
     return (
@@ -47,7 +49,7 @@ const DistinctiveInnovation = ()=> {
             </div>
 
             <div className="grid grid-cols-1 mb-5 mx-10 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
-                {paginatedProducts.slice(0, 4).map(i => (
+                {featuredProducts.map(i => (
                     <div data-aos="fade-up" data-aos-delay="50" key={i._id} className="bg-white shadow-sm rounded-md">
 
                         <img 
@@ -68,6 +70,7 @@ const DistinctiveInnovation = ()=> {
 
                         <h3 className="text-[#212121] text-xl pr-5 pb-3 font-extrabold">
                             {i.name}
+                            {i.isFeatured && <Star className="inline-block mb-1 mx-2 text-yellow-500" size={20} />}
                         </h3>
                         <p className="px-3 text-[#707070] line-clamp-2 pb-2">
                                         {i.description}

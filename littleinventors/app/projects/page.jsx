@@ -2,7 +2,8 @@
 import NavBar from "../Components/Navbar"
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import Image from 'next/image'
+import { Star } from 'lucide-react';
+// import Image from 'next/image'
 
 
 const Project = ()=>{
@@ -69,6 +70,7 @@ const Project = ()=>{
     
                             <h3 className="text-[#212121] text-xl pr-5 pb-3 font-extrabold">
                                 {i.name}
+                                 {i.isFeatured && <Star className="inline-block mb-1 mx-2 text-yellow-500" size={20} />}
                             </h3>
                             <p className="px-3 text-[#707070] pb-2 line-clamp-2">
                                 {i.description}
@@ -86,6 +88,28 @@ const Project = ()=>{
                         </div>
                     ))}
                 </div>
+                {/* أزرار التنقل */}
+                      <div className="flex justify-center gap-4 py-6">
+                        <button
+                          onClick={() => setPage(page - 1)}
+                          disabled={page === 1}
+                          className="px-4 py-2 border rounded disabled:opacity-30"
+                        >
+                          السابق
+                        </button>
+                
+                        <span className="px-3 py-2">
+                          صفحة {page} من {Math.ceil(products.length / limit)}
+                        </span>
+                
+                        <button
+                          onClick={() => setPage(page + 1)}
+                          disabled={end >= products.length}
+                          className="px-4 py-2 border rounded disabled:opacity-30"
+                        >
+                          التالي
+                        </button>
+                      </div>
         </>
     )
 }

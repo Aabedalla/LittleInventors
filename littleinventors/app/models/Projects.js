@@ -6,6 +6,8 @@ const ProjectSchema = new mongoose.Schema({
   images: [String],
   description: String,
   age: Number,
+  isFeatured: { type: Boolean, default: false }, // هل المنتج مميز
+  featuredAt: { type: Date, default: null } // وقت إضافة المنتج المميز
 
 });
 

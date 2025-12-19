@@ -5,8 +5,18 @@ import { NextResponse } from "next/server";
 // رفع منتج بعد رفع الصور من Frontend
 export async function POST(req) {
   await connectDB();
-  const data = await req.json(); // يحتوي على images[] روابط من Cloudinary
+  const data = await req.json();
+
   try {
+    // تحقق إذا المنتج مميز
+    if(data.isFeatured) {
+      const featuredCount = await Projects.countDocuments({ isFeatured: true });
+      if(featuredCount >= 4) {
+        return NextResponse.json({ error: "وصلنا الحد الأقصى للمنتجات المميزة" }, { status: 400 });
+      }
+      data.featuredAt = new Date();
+    }
+
     const product = await Projects.create(data);
     return NextResponse.json(product, { status: 201 });
   } catch (err) {

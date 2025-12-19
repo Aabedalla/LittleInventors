@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { Star } from 'lucide-react';
 
 const ProductsDashboard = () => {
   const [products, setProducts] = useState([]);
@@ -92,10 +93,27 @@ const ProductsDashboard = () => {
           <input name="name" placeholder="اسم المشروع" value={form.name} onChange={handleChange} className="border p-3 rounded-lg" />
           <input name="age" type="number" placeholder="العمر" value={form.age} onChange={handleChange} className="border p-3 rounded-lg" />
           <input name="category" placeholder="التصنيف" value={form.category} onChange={handleChange} className="border p-3 rounded-lg" />
+          <div className="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            name="isFeatured"
+            checked={form.isFeatured || false}
+            onChange={(e) => setForm({ ...form, isFeatured: e.target.checked })}
+          />
+          <label>مميز؟</label>
+        </div>
         </div>
         <textarea name="description" placeholder="الوصف" value={form.description} onChange={handleChange} className="border p-3 rounded-lg w-full"></textarea>
         <input type="file" multiple onChange={handleImagesChange} className="border p-3 rounded-lg w-full" />
-        <button type="submit" className="w-full bg-blue-500 hover:bg-blue-600 text-white p-3 rounded">{editingId ? "تعديل المشروع" : "إضافة المشروع"}</button>
+        <button
+          type="submit"
+          disabled={loading} // تمنع الضغط أثناء الإرسال
+          className={`w-full p-3 rounded text-white font-semibold ${
+            loading ? "bg-gray-400 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-600"
+          }`}
+        >
+          {loading ? "جاري الإضافة..." : editingId ? "تعديل المشروع" : "إضافة المشروع"}
+        </button>
       </form>
 
       <div className="overflow-x-auto overflow-y-auto max-h-[500px] shadow rounded-lg bg-white mt-6">
@@ -103,6 +121,7 @@ const ProductsDashboard = () => {
           <thead className="bg-gray-100 sticky top-0">
             <tr>
               <th className="py-3 px-4 text-center text-gray-700 font-medium">الاسم</th>
+              <th className="py-3 px-4 text-center text-gray-700 font-medium">مميز</th>
               <th className="py-3 px-4 text-center text-gray-700 font-medium">العمر</th>
               <th className="py-3 px-4 text-center text-gray-700 font-medium">الصنف</th>
               <th className="py-3 px-4 text-center text-gray-700 font-medium">الوصف</th>
@@ -114,6 +133,9 @@ const ProductsDashboard = () => {
             {products.map((p) => (
               <tr key={p._id} className="text-center border-t hover:bg-gray-50">
                 <td className="py-2 px-4">{p.name}</td>
+                <td className="py-2 px-4">
+                   {p.isFeatured && <Star className="inline-block mb-1 mx-2 text-yellow-500" size={20} />}
+                </td>
                 <td className="py-2 px-4">{p.age}</td>
                 <td className="py-2 px-4">{p.category}</td>
                 <td className="py-2 px-4">{p.description}</td>
