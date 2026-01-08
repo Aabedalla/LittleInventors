@@ -5,6 +5,7 @@ import { Star } from 'lucide-react';
 const ProductsDashboard = () => {
   const [products, setProducts] = useState([]);
   const [editingId, setEditingId] = useState(null);
+
   const [form, setForm] = useState({
     name: "",
     age: "",

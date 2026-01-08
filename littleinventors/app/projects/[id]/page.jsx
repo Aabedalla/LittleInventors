@@ -34,7 +34,7 @@ const ProjectDetails = async ({ params }) => {
         {/* الصورة */}
         <div>
           <Image
-            src={project.images?.[0] || "/placeholder.jpg"}
+            src={project.images?.[0] || "/SR logo.svg"}
             alt={project.name || "Project"}
             width={800}
             height={600}

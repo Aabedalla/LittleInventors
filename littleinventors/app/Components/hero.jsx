@@ -22,7 +22,7 @@ const Hero = () => {
       className="bg-gradient-to-r from-[#317EF9] to-[#912FB7] text-white cursor-pointer font-semibold px-8 py-3  rounded-xl shadow-md 
                   animate-bounce transition-transform  duration-200"
     >
-      إكتشف المشاريع
+      اكتشف الأبحاث   
     </Link>
 
     </div>

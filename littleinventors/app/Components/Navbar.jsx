@@ -5,7 +5,7 @@ const NavBar = () => {
     <nav className="flex flex-wrap shadow-md items-center justify-between  p-4 bg-gray-100">
       <div>
        <Link href="/" className="text-xl items-center flex font-bold text-[#C09059] cursor-pointer">
-          <img src="/smallresearcher.png" width={60}/> 
+          <img src="/SR-Gif.gif" width={120}/> 
        </Link>
       </div>
       <div className="flex gap-6 text-[#707070]">

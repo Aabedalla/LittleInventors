@@ -9,6 +9,7 @@ import { Star } from 'lucide-react';
 const Project = ()=>{
   const [products, setProducts] = useState([]);
   const [page, setPage] = useState(1);
+    const [isImg , setIsImg] = useState(false)
   const limit = 9;
 
   // جلب المنتجات من API
@@ -41,19 +42,18 @@ const Project = ()=>{
 
             <div className="bg-gradient-to-r from-[#317EF9] space-y-5 py-5 px-3 to-[#912FB7] text-white text-center">
                 <h1 className="text-3xl font-bold">
-                    معرض المشاريع
+                    معرض الأبحاث والانجازات 
                 </h1>
                 <p className="text-md ">
-                    استكشف المشاريع المبتكرة التي أنشأها المخترعون الشباب من جميع أنحاء العالم
+                    استكشف الأبحاث والانجازات التي أنشأها الباحثين الصغار من فلسطين.
                 </p>
             </div>
 
             <div className="grid grid-cols-1 mb-5 mx-10 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
                     {paginatedProducts.map(i => (
                         <div key={i._id} className="bg-white shadow-sm rounded-md">
-    
-                             <img 
-                            src={`${i.images[0]}`}
+                  <img 
+                            src={isImg > [0] ? `${i.images[0]}` : '/SR logo.svg'}
                             alt={i.name}
                             className="rounded-t-md h-52 w-full object-cover mb-3"
                         />
