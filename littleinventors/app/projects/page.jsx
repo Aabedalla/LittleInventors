@@ -53,10 +53,10 @@ const Project = ()=>{
                     {paginatedProducts.map(i => (
                         <div key={i._id} className="bg-white shadow-sm rounded-md">
                   <img 
-                            src={isImg > [0] ? `${i.images[0]}` : '/SR logo.svg'}
-                            alt={i.name}
-                            className="rounded-t-md h-52 w-full object-cover mb-3"
-                        />
+                    src={i.images && i.images.length > 0 ? i.images[0] : '/SR logo.svg'}
+                    alt={i.name}
+                    className="rounded-t-md h-52 w-full object-cover mb-3"
+                  />
     
                             <div className="flex gap-2 p-5 mb-2">
                                 <span className="bg-[#FF6F00] text-white rounded-full px-3 py-1 text-sm">
