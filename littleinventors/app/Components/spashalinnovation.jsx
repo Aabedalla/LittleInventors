@@ -53,7 +53,7 @@ const DistinctiveInnovation = ()=> {
                     <div data-aos="fade-up" data-aos-delay="50" key={i._id} className="bg-white shadow-sm rounded-md">
 
                         <img 
-                            src={`${i.images[0]}`}
+                            src={`${i.images[0] || '/SR logo.svg'}`}
                             alt={i.name}
                             className="rounded-t-md h-52 w-full object-cover mb-3"
                         />
